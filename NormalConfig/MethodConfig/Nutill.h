@@ -8,4 +8,4 @@
 
 #import <Foundation/Foundation.h>
 NSString* base64ToString(NSString *str);
-
+void removeNotification(id sel);

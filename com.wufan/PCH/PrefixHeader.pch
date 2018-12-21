@@ -23,5 +23,20 @@
 #define APP_URL_Common @"http://iwww.steelhome.cn/Business_v4/dcsearch.php"
 //#define APPDELEGATE (AppDelegate *)[UIApplication sharedApplication].delegate
 #define Django_URL @"http://192.168.31.57/"
+//当前屏幕的frame
 #define screen_bound [[UIScreen mainScreen] bounds]
+//Appdelegate实例
+#define APPDTE (AppDelegate *)[[UIApplication sharedApplication]delegate]
+
+#ifdef DEBUG //开发阶段
+
+#define NSLog(format,...) printf("%s [Line %d] " "%s\n",__PRETTY_FUNCTION__, __LINE__,[[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String])
+
+
+
+#else //发布阶段
+
+#define NSLog(...)
+#endif
+
 #endif /* PrefixHeader_pch */

@@ -365,6 +365,36 @@
 			path = baseClass;
 			sourceTree = "<group>";
 		};
+		112E0A6C21CA2BBE0047F458 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				5574EBFC2101C4E5000F2B26 /* AppDelegate.h */,
+				5574EBFD2101C4E5000F2B26 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		112E0A6D21CA2E2A0047F458 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				11FB352221CA3EC700993AF8 /* Test-WebView */,
+				5574ECB62101D793000F2B26 /* ProfileViewController.h */,
+				5574ECB72101D793000F2B26 /* ProfileViewController.m */,
+				550DF4D92106CA0500D14A66 /* ProfileViewController.xib */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		112E0A6E21CA2E590047F458 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				5574ECC52101D7C5000F2B26 /* MassageViewController.h */,
+				5574ECC62101D7C5000F2B26 /* MassageViewController.m */,
+				550DF4DE2106CD2F00D14A66 /* MassageViewController.xib */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
 		119039C221C78E1300A75784 /* NETResquest */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +404,57 @@
 				119039C721C78EC300A75784 /* RealTimeSearchDetail.m */,
 			);
 			path = NETResquest;
+			sourceTree = "<group>";
+		};
+		11FB351E21CA3E0900993AF8 /* Three */ = {
+			isa = PBXGroup;
+			children = (
+				5574ECCA2101D7EC000F2B26 /* ColaViewController.h */,
+				5574ECCB2101D7EC000F2B26 /* ColaViewController.m */,
+				550DF4E02106CD2F00D14A66 /* ColaViewController.xib */,
+			);
+			path = Three;
+			sourceTree = "<group>";
+		};
+		11FB351F21CA3E2A00993AF8 /* Four */ = {
+			isa = PBXGroup;
+			children = (
+				5574ECCF2101D7FC000F2B26 /* UserViewController.h */,
+				5574ECD02101D7FC000F2B26 /* UserViewController.m */,
+				550DF4E62106CDCF00D14A66 /* UserViewController.xib */,
+			);
+			path = Four;
+			sourceTree = "<group>";
+		};
+		11FB352021CA3E4300993AF8 /* Five */ = {
+			isa = PBXGroup;
+			children = (
+				5574ECD42101D80C000F2B26 /* MoreViewController.h */,
+				5574ECD52101D80C000F2B26 /* MoreViewController.m */,
+				550DF4E12106CD2F00D14A66 /* MoreViewController.xib */,
+			);
+			path = Five;
+			sourceTree = "<group>";
+		};
+		11FB352121CA3E7800993AF8 /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				5574ECE02101DF6B000F2B26 /* MainViewController.h */,
+				5574ECE12101DF6B000F2B26 /* MainViewController.m */,
+				5574ECB12101D783000F2B26 /* RootViewController.h */,
+				5574ECB22101D783000F2B26 /* RootViewController.m */,
+			);
+			path = Nav;
+			sourceTree = "<group>";
+		};
+		11FB352221CA3EC700993AF8 /* Test-WebView */ = {
+			isa = PBXGroup;
+			children = (
+				5574ECC02101D7B5000F2B26 /* ModelViewController.h */,
+				5574ECC12101D7B5000F2B26 /* ModelViewController.m */,
+				550DF4DF2106CD2F00D14A66 /* ModelViewController.xib */,
+			);
+			path = "Test-WebView";
 			sourceTree = "<group>";
 		};
 		551DD0652146563A002C6708 /* NormalConfig */ = {
@@ -423,13 +504,12 @@
 		5574EBFB2101C4E5000F2B26 /* com.wufan */ = {
 			isa = PBXGroup;
 			children = (
+				112E0A6C21CA2BBE0047F458 /* AppDelegate */,
 				55BB9A1821718A930008CBC4 /* image */,
 				55CCBA92215B8C8700B75635 /* SDK */,
 				5552210B2122CED200D74A7A /* com.wufan.entitlements */,
 				5574ECB02101D740000F2B26 /* TabBar */,
 				5574ECAE2101CA74000F2B26 /* PCH */,
-				5574EBFC2101C4E5000F2B26 /* AppDelegate.h */,
-				5574EBFD2101C4E5000F2B26 /* AppDelegate.m */,
 				5574EBFF2101C4E5000F2B26 /* ViewController.h */,
 				5574EC002101C4E5000F2B26 /* ViewController.m */,
 				5574EC022101C4E5000F2B26 /* Main.storyboard */,
@@ -495,32 +575,16 @@
 		5574ECB02101D740000F2B26 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				11FB352121CA3E7800993AF8 /* Nav */,
+				11FB352021CA3E4300993AF8 /* Five */,
+				11FB351F21CA3E2A00993AF8 /* Four */,
+				11FB351E21CA3E0900993AF8 /* Three */,
+				112E0A6E21CA2E590047F458 /* Second */,
+				112E0A6D21CA2E2A0047F458 /* First */,
 				119039C221C78E1300A75784 /* NETResquest */,
 				1109A47C21B3DFE5007E3048 /* baseClass */,
 				55BB9A06216DA1A70008CBC4 /* Location */,
 				5574ECE521055801000F2B26 /* AnimationManger */,
-				5574ECB12101D783000F2B26 /* RootViewController.h */,
-				5574ECB22101D783000F2B26 /* RootViewController.m */,
-				5574ECB62101D793000F2B26 /* ProfileViewController.h */,
-				5574ECB72101D793000F2B26 /* ProfileViewController.m */,
-				550DF4D92106CA0500D14A66 /* ProfileViewController.xib */,
-				5574ECC02101D7B5000F2B26 /* ModelViewController.h */,
-				5574ECC12101D7B5000F2B26 /* ModelViewController.m */,
-				550DF4DF2106CD2F00D14A66 /* ModelViewController.xib */,
-				5574ECC52101D7C5000F2B26 /* MassageViewController.h */,
-				5574ECC62101D7C5000F2B26 /* MassageViewController.m */,
-				550DF4DE2106CD2F00D14A66 /* MassageViewController.xib */,
-				5574ECCA2101D7EC000F2B26 /* ColaViewController.h */,
-				5574ECCB2101D7EC000F2B26 /* ColaViewController.m */,
-				550DF4E02106CD2F00D14A66 /* ColaViewController.xib */,
-				5574ECCF2101D7FC000F2B26 /* UserViewController.h */,
-				5574ECD02101D7FC000F2B26 /* UserViewController.m */,
-				550DF4E62106CDCF00D14A66 /* UserViewController.xib */,
-				5574ECD42101D80C000F2B26 /* MoreViewController.h */,
-				5574ECD52101D80C000F2B26 /* MoreViewController.m */,
-				550DF4E12106CD2F00D14A66 /* MoreViewController.xib */,
-				5574ECE02101DF6B000F2B26 /* MainViewController.h */,
-				5574ECE12101DF6B000F2B26 /* MainViewController.m */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";

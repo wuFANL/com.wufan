@@ -118,6 +118,11 @@
     [self createNav:self];
     
 }
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+//    self.navigationController.navigationBar.hidden=NO;
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 
 #pragma mark 根据地名确定地理坐标
 -(void)getCoordinateByAddress:(NSString *)address{
@@ -277,7 +282,10 @@
         return nil;
     }
 }
+-(void)dealloc{
 
+
+}
 
 
 @end

@@ -16,10 +16,10 @@ static BOOL isiPhone5Add;
 static BOOL isDebug;
 static BOOL isLoginOK;
 static NSString *UID;
-// guozhenwei add start
+
 static int Platform;
 static int PlatformIsTest;
-// guozhenwei add end
+
 @implementation AppEnv
 
 -(id)init

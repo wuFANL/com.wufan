@@ -97,17 +97,22 @@
 //    self.window=[[UIWindow alloc]initWithFrame:screen_bound];
 //    self.window.backgroundColor=[UIColor whiteColor];
 //    [self.window makeKeyAndVisible];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"allowRotation" object:self];
+    
+    
     
     
     MainViewController *vc=[[MainViewController alloc]init];
     UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
+    [nav setNavigationBarHidden:YES animated:YES];
     self.window.rootViewController=nav;
     [self.window makeKeyAndVisible];
     
     UIImageView *imageview=[[UIImageView alloc]initWithFrame:screen_bound];
     imageview.image=[UIImage imageNamed:@"启动"];
 //    imageview.contentMode=UIViewContentModeScaleAspectFill;
-    
+    nav.navigationBar.translucent=NO;
+    self.allowRotation=NO;
     [self.window addSubview:imageview];
     [UIView animateWithDuration:2 animations:^{
         imageview.transform=CGAffineTransformMakeScale(2.3, 2.3);
@@ -209,5 +214,17 @@
     [[XGPush defaultManager] reportXGNotificationInfo:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
+//设置这个方法将
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    if(self.allowRotation){
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    }else{
+           return UIInterfaceOrientationMaskPortrait;
+    }
+    
+    
+    
+}
+
 
 @end

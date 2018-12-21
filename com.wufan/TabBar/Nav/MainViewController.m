@@ -25,19 +25,24 @@
     self.delegate=self;
     self.selectedIndex=0;
 //    _panGesturcognizer=[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGuestRecognizer:)];
-    [self.view addGestureRecognizer:self.panGesturcognizer];
+//    [self.view addGestureRecognizer:self.panGesturcognizer];
     
 //    ProfileViewController *profilevc=[[ProfileViewController alloc]init];
     
     ProfileViewController *profilevc=[[ProfileViewController alloc]initWithNibName:@"ProfileViewController" bundle:nil];
-    
-    
     MassageViewController *messagevc=[[MassageViewController alloc]initWithNibName:@"MassageViewController" bundle:nil];
     ColaViewController *colavc=[[ColaViewController alloc]initWithNibName:@"ColaViewController" bundle:nil];
     UserViewController *uservc=[[UserViewController alloc]initWithNibName:@"UserViewController" bundle:nil];
     MoreViewController *morevc=[[MoreViewController alloc]initWithNibName:@"MoreViewController" bundle:nil];
+   
     
-    self.viewControllers=@[profilevc,messagevc,colavc,uservc,morevc];
+    PRNav=[[UINavigationController alloc]initWithRootViewController:profilevc];
+    MENav=[[UINavigationController alloc]initWithRootViewController:messagevc];
+    CONav=[[UINavigationController alloc]initWithRootViewController:colavc];
+    USNav=[[UINavigationController alloc]initWithRootViewController:uservc];
+    MONav=[[UINavigationController alloc]initWithRootViewController:morevc];
+    
+  self.viewControllers=@[PRNav,MENav,CONav,USNav,MONav];
     
     for (int i=0; i<self.tabBar.items.count; i++) {
         UITabBarItem *item=[self.tabBar.items objectAtIndex:i];
@@ -68,13 +73,7 @@
                 break;
         }
         
-        
-        
-        
     }
-    
-    
-    
     
     // Do any additional setup after loading the view.
 }
@@ -86,6 +85,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 -(UIPanGestureRecognizer *)panGesturcognizer{
     if (_panGesturcognizer==nil) {
         _panGesturcognizer=[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGuestRecognizer:)];
@@ -93,8 +95,7 @@
     return _panGesturcognizer;
 }
 -(void)panGuestRecognizer:(UIPanGestureRecognizer *)pan{
-    
-    
+      return;
     if (self.transitionCoordinator) {
         return;
     }
@@ -102,10 +103,6 @@
     if (pan.state==UIGestureRecognizerStateBegan||pan.state==UIGestureRecognizerStateChanged) {
         [self beginInteractiveTransitionIfPossible:pan];
     }
-    
-    
-    
-    
     
 }
 //响应的动画
@@ -137,6 +134,7 @@
         }
     }];
 }
+/*
 -(id<UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController animationControllerForTransitionFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
     
 //    if (self.panGesturcognizer.state==UIGestureRecognizerStateBegan||self.panGesturcognizer.state==UIGestureRecognizerStateChanged) {
@@ -149,8 +147,6 @@
 //    }else{
 //        return nil;
 //    }
-    
-    
 }
 -(id<UIViewControllerInteractiveTransitioning>)tabBarController:(UITabBarController *)tabBarController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
     if (self.panGesturcognizer.state==UIGestureRecognizerStateBegan||self.panGesturcognizer.state==UIGestureRecognizerStateChanged) {
@@ -162,6 +158,7 @@
         
     }
 }
+/*
 /*
 
 
@@ -187,7 +184,7 @@
     // [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

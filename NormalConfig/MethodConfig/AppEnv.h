@@ -5,7 +5,7 @@
 //  Created by 李 绿华 on 12-12-27.
 //  Copyright (c) 2012年 WilliamLee. All rights reserved.
 //
-
+//开局设置一次 全局都会获取到
 
 #import <Foundation/Foundation.h>
 

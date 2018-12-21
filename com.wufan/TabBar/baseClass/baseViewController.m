@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    AppDelegate *appdele=APPDTE;
+    appdele.allowRotation=YES;
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
    
@@ -46,7 +48,7 @@
     
 //    dispatch_async(dispatch_get_main_queue(), ^{
         // 隐藏系统导航栏
-        vc.navigationController.navigationBar.hidden = YES;
+    [vc.navigationController setNavigationBarHidden:YES animated:YES];
         // 创建假的导航栏
         UIView *navView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, 44)];
         [vc.view addSubview:navView];
@@ -82,6 +84,15 @@
     UIBarButtonItem *btnItem=[[UIBarButtonItem alloc]initWithCustomView:view];
     self.navigationItem.leftBarButtonItem=btnItem;
 }
+- (BOOL)shouldAutorotate {
+    return NO;
+}
 
+-(void)dealloc{
+    
+    
+    
+    
+}
 
 @end

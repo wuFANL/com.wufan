@@ -14,5 +14,6 @@
 @property NSException *uncaughtExceptionHandler;
 @property(strong ,nonatomic)NSString *string;
 @property (strong,nonatomic)UIColor *color;
+@property BOOL allowRotation;
 @end
 
