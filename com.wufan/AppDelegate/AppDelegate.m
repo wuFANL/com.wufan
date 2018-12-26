@@ -105,6 +105,8 @@
     MainViewController *vc=[[MainViewController alloc]init];
     UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
     [nav setNavigationBarHidden:YES animated:YES];
+    
+    
     self.window.rootViewController=nav;
     [self.window makeKeyAndVisible];
     

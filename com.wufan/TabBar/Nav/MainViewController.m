@@ -14,6 +14,8 @@
 #import "MoreViewController.h"
 #import "Animation.h"
 #import "AnimationController.h"
+	
+//#import "Maso"
 @interface MainViewController ()<UITabBarControllerDelegate>
 @property (nonatomic,strong) UIPanGestureRecognizer *panGesturcognizer;
 @end
@@ -37,41 +39,66 @@
    
     
     PRNav=[[UINavigationController alloc]initWithRootViewController:profilevc];
-    MENav=[[UINavigationController alloc]initWithRootViewController:messagevc];
-    CONav=[[UINavigationController alloc]initWithRootViewController:colavc];
-    USNav=[[UINavigationController alloc]initWithRootViewController:uservc];
-    MONav=[[UINavigationController alloc]initWithRootViewController:morevc];
+    PRNav.tabBarItem.title=@"首页";
+    PRNav.tabBarItem.image=[UIImage imageNamed:@"shuoye"];
+    PRNav.tabBarItem.selectedImage=[UIImage imageNamed:@"shuoyeselect"];
     
+    
+    MENav=[[UINavigationController alloc]initWithRootViewController:messagevc];
+    MENav.tabBarItem.title=@"分类";
+    MENav.tabBarItem.image=[UIImage imageNamed:@"fenlei"];
+    MENav.tabBarItem.selectedImage=[UIImage imageNamed:@"fenleiselect"];
+    
+    CONav=[[UINavigationController alloc]initWithRootViewController:colavc];
+    CONav.tabBarItem.title=@"品味";
+    CONav.tabBarItem.image=[UIImage imageNamed:@"pingwei"];
+    CONav.tabBarItem.selectedImage=[UIImage imageNamed:@"pingweiselect"];
+    USNav=[[UINavigationController alloc]initWithRootViewController:uservc];
+    USNav.tabBarItem.title=@"购物车";
+    USNav.tabBarItem.image=[UIImage imageNamed:@"gwc"];
+    USNav.tabBarItem.selectedImage=[UIImage imageNamed:@"gwcselect"];
+    MONav=[[UINavigationController alloc]initWithRootViewController:morevc];
+    MONav.tabBarItem.title=@"我的";
+    MONav.tabBarItem.image=[UIImage imageNamed:@"wode"];
+    MONav.tabBarItem.selectedImage=[UIImage imageNamed:@"wodeselect"];
+    
+    self.tabBar.backgroundColor=RGBHex(0xfeeeed);
   self.viewControllers=@[PRNav,MENav,CONav,USNav,MONav];
     
     for (int i=0; i<self.tabBar.items.count; i++) {
+        
         UITabBarItem *item=[self.tabBar.items objectAtIndex:i];
+        
+        
 //        item settitlea
         NSDictionary *dic=@{NSForegroundColorAttributeName:[UIColor colorWithRed:0.45 green:0.55 blue:0.58 alpha:1.0]};
         [item setTitleTextAttributes:dic forState:UIControlStateNormal];
-            NSDictionary *selecteddic = @{NSForegroundColorAttributeName: [UIColor colorWithRed:0.384 green:0.808 blue:0.663 alpha:1.00]};
-            [item setTitleTextAttributes:selecteddic forState:UIControlStateSelected];
+            NSDictionary *selecteddic = @{NSForegroundColorAttributeName:RGBHex(0x1E90FF)};
         
-        switch (i) {
-            case 0:
-                item.title=@"第一个";
-                break;
-            case 1:
-                item.title=@"第二个";
-                break;
-            case 2:
-                item.title=@"第三个";
-                break;
-                
-            case 3:
-                item.title=@"第四个";
-                break;
-            case 4:
-                item.title=@"第五个";
-                break;
-            default:
-                break;
-        }
+            [item setTitleTextAttributes:selecteddic forState:UIControlStateSelected];
+     [item setTitleTextAttributes:@{ NSForegroundColorAttributeName : RGBHex(0x8C8C8C),NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:10.0]}            forState:UIControlStateNormal];
+        
+//
+//        switch (i) {
+//            case 0:
+//                item.title=@"第一个";
+//                break;
+//            case 1:
+//                item.title=@"第二个";
+//                break;
+//            case 2:
+//                item.title=@"第三个";
+//                break;
+//
+//            case 3:
+//                item.title=@"第四个";
+//                break;
+//            case 4:
+//                item.title=@"第五个";
+//                break;
+//            default:
+//                break;
+//        }
         
     }
     

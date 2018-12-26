@@ -84,6 +84,61 @@
     UIBarButtonItem *btnItem=[[UIBarButtonItem alloc]initWithCustomView:view];
     self.navigationItem.leftBarButtonItem=btnItem;
 }
+-(UIView *)selectBtn{
+    if (_selectBtn) {
+        _selectBtn=[[UIView alloc]init];
+//        float w=screen_bound.size.width-100;
+        UIButton *select=[[UIButton alloc]init];
+        select.imageView.image=[UIImage imageNamed:@"select"];
+        select.contentMode=UIViewContentModeScaleAspectFit;
+        [_selectBtn addSubview:select];
+        [select mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(2);
+        }];
+        
+        
+        [select mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(2);
+            make.left.mas_equalTo(2);
+//            make.centerY.mas_equalTo(self.selectBtn.center.y);
+            make.size.mas_equalTo(CGSizeMake(20, 20));
+            make.bottom.mas_equalTo(2);
+        }];
+        
+        UIButton *QR=[[UIButton alloc]init];
+        QR.imageView.image=[UIImage imageNamed:@"erweima"];
+        QR.contentMode=UIViewContentModeScaleAspectFit;
+        [_selectBtn addSubview:QR];
+        [QR mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(2);
+            make.right.mas_equalTo(2);
+            //            make.centerY.mas_equalTo(self.selectBtn.center.y);
+            make.size.mas_equalTo(CGSizeMake(20, 20));
+            make.bottom.mas_equalTo(2);
+        }];
+        UIButton *centerBtn=[[UIButton alloc]init];
+        centerBtn.backgroundColor=RGBHex(0XD3D3D3);
+        [_selectBtn addSubview:centerBtn];
+        
+        [QR mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(2);
+            make.centerY.mas_equalTo(self.selectBtn.center.y);
+            make.size.mas_equalTo(CGSizeMake(65, 40)).offset(44);
+            //            make.centerY.mas_equalTo(self.selectBtn.center.y);
+            make.bottom.mas_equalTo(2);
+        }];
+      
+        
+    }
+    return _selectBtn;
+}
+
+-(void)SelectBtnView{
+
+    
+}
+
+
 - (BOOL)shouldAutorotate {
     return NO;
 }

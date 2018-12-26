@@ -18,13 +18,33 @@
 #import "AFNetworking.h"
 #import "Nutill.h"
 #import "AppDelegate.h"
+
+
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+#import "YYModel.h"
+#import "UIImageView+WebCache.h"
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+
+
+
+
+
+
+
 #define dateurl @"456"
 //1 文件上传
 #define APP_URL_Common @"http://iwww.steelhome.cn/Business_v4/dcsearch.php"
 //#define APPDELEGATE (AppDelegate *)[UIApplication sharedApplication].delegate
 #define Django_URL @"http://192.168.31.57/"
-//当前屏幕的frame
+//当前屏幕的bound
 #define screen_bound [[UIScreen mainScreen] bounds]
+//当前屏幕的frame
+#define screen_fram [[UIScreen mainScreen] frame]
 //Appdelegate实例
 #define APPDTE (AppDelegate *)[[UIApplication sharedApplication]delegate]
 
@@ -38,5 +58,15 @@
 
 #define NSLog(...)
 #endif
+//十六进制颜色 设置
+#define RGBHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define RGBHexAlpha(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)]
+//RGB颜色 设置
+#define RGB(r, g, b)             [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+#define RGBAlpha(r, g, b, a)     [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:(a)]
+
+
+
+
 
 #endif /* PrefixHeader_pch */

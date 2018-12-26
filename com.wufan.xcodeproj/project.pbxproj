@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112FC31921D224E300268F8F /* libPods-com.wufan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 112FC31821D224E300268F8F /* libPods-com.wufan.a */; };
 		119039C521C78E9600A75784 /* RealtimeSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 119039C421C78E9600A75784 /* RealtimeSearch.m */; };
 		119039C821C78EC300A75784 /* RealTimeSearchDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 119039C721C78EC300A75784 /* RealTimeSearchDetail.m */; };
 		119039CB21C7E1AF00A75784 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119039CA21C7E1AF00A75784 /* Images.xcassets */; };
@@ -119,7 +120,6 @@
 		55D876442199039C00A032E9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D876432199039C00A032E9 /* CFNetwork.framework */; };
 		55D87646219903A600A032E9 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D87645219903A600A032E9 /* PassKit.framework */; };
 		592C81D2B05202F93BAAF495 /* libPods-com.wufanUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3275076F621375E340DD472 /* libPods-com.wufanUITests.a */; };
-		803876D20092FF4A537B91BE /* libPods-com.wufan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C0ABD8BD59FC838344AD70 /* libPods-com.wufan.a */; };
 		DC6E7DFCB22DA820937C03C5 /* libPods-com.wufanTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C9CFA492754085FE8BC0C5 /* libPods-com.wufanTests.a */; };
 /* End PBXBuildFile section */
 
@@ -141,13 +141,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A54F4DF11B3AE47E241B7BA /* Pods-com.wufanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufanTests/Pods-com.wufanTests.release.xcconfig"; sourceTree = "<group>"; };
+		112FC31821D224E300268F8F /* libPods-com.wufan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-com.wufan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		119039C321C78E9600A75784 /* RealtimeSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealtimeSearch.h; sourceTree = "<group>"; };
 		119039C421C78E9600A75784 /* RealtimeSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealtimeSearch.m; sourceTree = "<group>"; };
 		119039C621C78EC300A75784 /* RealTimeSearchDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealTimeSearchDetail.h; sourceTree = "<group>"; };
 		119039C721C78EC300A75784 /* RealTimeSearchDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealTimeSearchDetail.m; sourceTree = "<group>"; };
 		119039CA21C7E1AF00A75784 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		326AAEEACF6F8D39BBD5C072 /* Pods-com.wufanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufanUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufanUITests/Pods-com.wufanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		11EC149D21D0CF650011E5A4 /* ssPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssPCH.pch; sourceTree = "<group>"; };
 		47C9CFA492754085FE8BC0C5 /* libPods-com.wufanTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-com.wufanTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		550DF4D22106B96500D14A66 /* baseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = baseViewController.h; sourceTree = "<group>"; };
 		550DF4D32106B96500D14A66 /* baseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = baseViewController.m; sourceTree = "<group>"; };
@@ -282,12 +282,14 @@
 		55D876412199038F00A032E9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		55D876432199039C00A032E9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		55D87645219903A600A032E9 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
-		6F541D35FF8EED1D1890646D /* Pods-com.wufan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufan/Pods-com.wufan.debug.xcconfig"; sourceTree = "<group>"; };
-		A9DBBF0DD1F58105D9E6A847 /* Pods-com.wufan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufan.release.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufan/Pods-com.wufan.release.xcconfig"; sourceTree = "<group>"; };
+		5E8364C6A6DA930612CDDDD3 /* Pods-com.wufan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufan.release.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufan/Pods-com.wufan.release.xcconfig"; sourceTree = "<group>"; };
+		69D64D9E42A0DBF95734DAA8 /* Pods-com.wufan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufan/Pods-com.wufan.debug.xcconfig"; sourceTree = "<group>"; };
+		AF455C791CD4BD2F9F70F015 /* Pods-com.wufanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufanUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufanUITests/Pods-com.wufanUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B5C0ABD8BD59FC838344AD70 /* libPods-com.wufan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-com.wufan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D94A14D372F9C1BC261FA9BC /* Pods-com.wufanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufanUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufanUITests/Pods-com.wufanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5D5C4F91D97C5A1D4EEDB76 /* Pods-com.wufanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufanTests/Pods-com.wufanTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3275076F621375E340DD472 /* libPods-com.wufanUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-com.wufanUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F654EC4CA26D2788AFB7E799 /* Pods-com.wufanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufanTests/Pods-com.wufanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E70244AFC4428C271DE05E00 /* Pods-com.wufanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufanUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufanUITests/Pods-com.wufanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F38CBA2ACCCC11E84F39F36F /* Pods-com.wufanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.wufanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-com.wufanTests/Pods-com.wufanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +297,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112FC31921D224E300268F8F /* libPods-com.wufan.a in Frameworks */,
 				55D87646219903A600A032E9 /* PassKit.framework in Frameworks */,
 				55D876442199039C00A032E9 /* CFNetwork.framework in Frameworks */,
 				55D876422199038F00A032E9 /* libc++.tbd in Frameworks */,
@@ -324,7 +327,6 @@
 				55D87639219902EF00A032E9 /* libFuqianlaPay.a in Frameworks */,
 				5574EC362101C533000F2B26 /* Security.framework in Frameworks */,
 				55D87632219902EF00A032E9 /* libPaymentControl.a in Frameworks */,
-				803876D20092FF4A537B91BE /* libPods-com.wufan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +489,7 @@
 				5574EC1F2101C4F7000F2B26 /* com.wufanUITests */,
 				5574EBFA2101C4E5000F2B26 /* Products */,
 				5574EC322101C52D000F2B26 /* Frameworks */,
-				E9EC2128AD0E3877C2BE09C6 /* Pods */,
+				A185F4A9F52F0A88C1CF3A4E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -543,6 +545,7 @@
 		5574EC322101C52D000F2B26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				112FC31821D224E300268F8F /* libPods-com.wufan.a */,
 				55D87645219903A600A032E9 /* PassKit.framework */,
 				55D876432199039C00A032E9 /* CFNetwork.framework */,
 				55D876412199038F00A032E9 /* libc++.tbd */,
@@ -568,6 +571,7 @@
 			isa = PBXGroup;
 			children = (
 				5574ECAF2101CA8C000F2B26 /* PrefixHeader.pch */,
+				11EC149D21D0CF650011E5A4 /* ssPCH.pch */,
 			);
 			path = PCH;
 			sourceTree = "<group>";
@@ -825,15 +829,15 @@
 			path = support;
 			sourceTree = "<group>";
 		};
-		E9EC2128AD0E3877C2BE09C6 /* Pods */ = {
+		A185F4A9F52F0A88C1CF3A4E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6F541D35FF8EED1D1890646D /* Pods-com.wufan.debug.xcconfig */,
-				A9DBBF0DD1F58105D9E6A847 /* Pods-com.wufan.release.xcconfig */,
-				F654EC4CA26D2788AFB7E799 /* Pods-com.wufanTests.debug.xcconfig */,
-				0A54F4DF11B3AE47E241B7BA /* Pods-com.wufanTests.release.xcconfig */,
-				D94A14D372F9C1BC261FA9BC /* Pods-com.wufanUITests.debug.xcconfig */,
-				326AAEEACF6F8D39BBD5C072 /* Pods-com.wufanUITests.release.xcconfig */,
+				69D64D9E42A0DBF95734DAA8 /* Pods-com.wufan.debug.xcconfig */,
+				5E8364C6A6DA930612CDDDD3 /* Pods-com.wufan.release.xcconfig */,
+				F38CBA2ACCCC11E84F39F36F /* Pods-com.wufanTests.debug.xcconfig */,
+				C5D5C4F91D97C5A1D4EEDB76 /* Pods-com.wufanTests.release.xcconfig */,
+				E70244AFC4428C271DE05E00 /* Pods-com.wufanUITests.debug.xcconfig */,
+				AF455C791CD4BD2F9F70F015 /* Pods-com.wufanUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1271,6 +1275,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				cocoapods = "$(PODS_ROOT) ";
 			};
 			name = Debug;
 		};
@@ -1323,12 +1328,13 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				cocoapods = "$(PODS_ROOT) ";
 			};
 			name = Release;
 		};
 		5574EC262101C4F8000F2B26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F541D35FF8EED1D1890646D /* Pods-com.wufan.debug.xcconfig */;
+			baseConfigurationReference = 69D64D9E42A0DBF95734DAA8 /* Pods-com.wufan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1342,6 +1348,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/com.wufan/PCH/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = com.wufan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1361,20 +1368,28 @@
 					"$(PROJECT_DIR)/com.wufan/SDK/libs/Channels/YiBaoPay",
 					"$(PROJECT_DIR)/com.wufan/SDK/libs/fqlLibs",
 					"$(PROJECT_DIR)/com.wufan/SDK/libs/support",
+					$PODS_CONFIGURATION_BUILD_DIR/Masonry,
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
 					"-all_load",
-					"-Objc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.wufan.com-wufan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = (
+					"$PODS_ROOT/**",
+					"$(inherited)",
+					"${SRCROOT}/**",
+				);
 			};
 			name = Debug;
 		};
 		5574EC272101C4F8000F2B26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9DBBF0DD1F58105D9E6A847 /* Pods-com.wufan.release.xcconfig */;
+			baseConfigurationReference = 5E8364C6A6DA930612CDDDD3 /* Pods-com.wufan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1388,7 +1403,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/com.wufan/PCH/PrefixHeader.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = NS_BLOCK_ASSERTIONS;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = com.wufan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1408,20 +1423,28 @@
 					"$(PROJECT_DIR)/com.wufan/SDK/libs/Channels/YiBaoPay",
 					"$(PROJECT_DIR)/com.wufan/SDK/libs/fqlLibs",
 					"$(PROJECT_DIR)/com.wufan/SDK/libs/support",
+					$PODS_CONFIGURATION_BUILD_DIR/Masonry,
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
 					"-all_load",
-					"-Objc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.wufan.com-wufan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = (
+					"$PODS_ROOT/**",
+					"$(inherited)",
+					"${SRCROOT}/**",
+				);
 			};
 			name = Release;
 		};
 		5574EC292101C4F8000F2B26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F654EC4CA26D2788AFB7E799 /* Pods-com.wufanTests.debug.xcconfig */;
+			baseConfigurationReference = F38CBA2ACCCC11E84F39F36F /* Pods-com.wufanTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1444,7 +1467,7 @@
 		};
 		5574EC2A2101C4F8000F2B26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A54F4DF11B3AE47E241B7BA /* Pods-com.wufanTests.release.xcconfig */;
+			baseConfigurationReference = C5D5C4F91D97C5A1D4EEDB76 /* Pods-com.wufanTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1467,7 +1490,7 @@
 		};
 		5574EC2C2101C4F8000F2B26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D94A14D372F9C1BC261FA9BC /* Pods-com.wufanUITests.debug.xcconfig */;
+			baseConfigurationReference = E70244AFC4428C271DE05E00 /* Pods-com.wufanUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = com.wufanUITests/Info.plist;
@@ -1489,7 +1512,7 @@
 		};
 		5574EC2D2101C4F8000F2B26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 326AAEEACF6F8D39BBD5C072 /* Pods-com.wufanUITests.release.xcconfig */;
+			baseConfigurationReference = AF455C791CD4BD2F9F70F015 /* Pods-com.wufanUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = com.wufanUITests/Info.plist;

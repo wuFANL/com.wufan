@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "RealtimeSearch.h"
 
+//#import "Mason"
 
 
 @interface ProfileViewController ()<ModeViewDelegate>
@@ -21,11 +22,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    [self createBarView];
+    self.navigationController.navigationBar.hidden=YES;
     
 //     self.view.backgroundColor = [UIColor orangeColor];
     // Do any additional setup after loading the view.
+}
+-(void)createBarView{
+    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.navigationController.navigationBar.frame.size.width, 44)];
+    view.backgroundColor=[UIColor orangeColor];
+    
+   
+    
+    
+//     [self.navigationController.view addSubview:view];
+    [self.navigationController.navigationBar addSubview:view];
+    
+    
+//    [self.selectBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+////        make.top.mas_equalTo(2); make.centerY.mas_equalTo(self.navigationController.navigationBar.center.y);
+//        make.size.mas_equalTo(CGSizeMake(150, 40));
+//    }];
 }
 - (IBAction)afnetTest:(id)sender {
     
