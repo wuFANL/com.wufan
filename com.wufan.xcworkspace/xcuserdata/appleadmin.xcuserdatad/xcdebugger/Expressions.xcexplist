@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "__40-[ProfileViewController viewWillAppear:]_block_invoke:ProfileViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+            <PersistentString
+               value = "self.selectBtn">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MYUISearchBar initWithString:from:]:MYUISearchBar.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "searchButton">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ewmViewController viewDidLoad]:ewmViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.info">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ProfileViewController createBarView]:ProfileViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.selectBtn">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MASConstraintMaker install]:MASConstraintMaker.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.updateExisting">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ewmViewController createImage]:ewmViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imgVQRCode">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ProfileViewController viewWillAppear:]:ProfileViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationItem.titleView">
+            </PersistentString>
+            <PersistentString
+               value = "self.selectBtn">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__30-[MJViewController reloadDate]_block_invoke:MJViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "data[i][@&quot;title&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[baseViewController keyboardWillShow:]:baseViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.firstResponderTextF.frame.origin.y">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MJViewController tableView:cellForRowAtIndexPath:]:MJViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageUrlList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

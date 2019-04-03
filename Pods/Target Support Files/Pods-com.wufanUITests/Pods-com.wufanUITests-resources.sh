@@ -101,6 +101,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/MoxieSDK-iOS/MoxieSDK/resources/screenshot_header_bg@2x.png"
   install_resource "${PODS_ROOT}/MoxieSDK-iOS/MoxieSDK/resources/screenshot_imported@2x.png"
   install_resource "${PODS_ROOT}/MoxieSDK-iOS/MoxieSDK/resources/screenshot_next@2x.png"
+  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
@@ -112,6 +113,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/MoxieSDK-iOS/MoxieSDK/resources/screenshot_header_bg@2x.png"
   install_resource "${PODS_ROOT}/MoxieSDK-iOS/MoxieSDK/resources/screenshot_imported@2x.png"
   install_resource "${PODS_ROOT}/MoxieSDK-iOS/MoxieSDK/resources/screenshot_next@2x.png"
+  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

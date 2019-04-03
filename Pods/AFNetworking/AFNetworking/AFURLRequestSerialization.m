@@ -513,7 +513,8 @@ forHTTPHeaderField:(NSString *)field
         }
         [mutableRequest setHTTPBody:[query dataUsingEncoding:self.stringEncoding]];
     }
-
+NSLog(@"当前请求：%@", [request.URL.absoluteString stringByAppendingString:(query.length?[NSString stringWithFormat:@"?%@",query]:@"")]);
+    
     return mutableRequest;
 }
 

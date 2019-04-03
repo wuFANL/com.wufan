@@ -20,6 +20,7 @@ pod 'ReactiveObjC', '~> 3.0.0'
     pod 'HYBNetworking'
     pod 'MBProgressHUD'
     pod 'YYModel'
+    pod 'SDWebImage'
     pod 'IQKeyboardManager'
     pod 'Masonry'
     pod 'SDCycleScrollView'
@@ -29,6 +30,7 @@ pod 'ReactiveObjC', '~> 3.0.0'
     pod 'UITextView+Placeholder'
     pod 'Bugly'
     pod 'MoxieSDK-iOS'
-  end
+    pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+   end
 
 end

@@ -62,12 +62,8 @@
         NSLog(@"click from Action2");
     }
     [[XGPush defaultManager] reportXGNotificationResponse:response];
-    completionHandler();
-    
+    completionHandler();    
          [[NSNotificationCenter defaultCenter]postNotificationName:@"XGPush" object:nil userInfo:response.notification.request.content.userInfo];
-    
-    
-    
 }
 
 // App 在前台弹通知需要调用这个接口
@@ -97,16 +93,15 @@
 //    self.window=[[UIWindow alloc]initWithFrame:screen_bound];
 //    self.window.backgroundColor=[UIColor whiteColor];
 //    [self.window makeKeyAndVisible];
+    
+    NSString *version= [UIDevice currentDevice].systemVersion;
+    if(version.doubleValue >=12.0) {
+        [[UITabBar appearance] setTranslucent:NO];
+    }
     [[NSNotificationCenter defaultCenter]postNotificationName:@"allowRotation" object:self];
-    
-    
-    
-    
     MainViewController *vc=[[MainViewController alloc]init];
     UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
     [nav setNavigationBarHidden:YES animated:YES];
-    
-    
     self.window.rootViewController=nav;
     [self.window makeKeyAndVisible];
     
@@ -117,7 +112,7 @@
     self.allowRotation=NO;
     [self.window addSubview:imageview];
     [UIView animateWithDuration:2 animations:^{
-        imageview.transform=CGAffineTransformMakeScale(2.3, 2.3);
+        imageview.transform=CGAffineTransformMakeScale(1.3, 1.3);
         
     }completion:^(BOOL finished) {
         [imageview removeFromSuperview];

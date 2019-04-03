@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "AppEnv.h"
+#import "BCHttpRequest.h"
 @interface baseViewController : UIViewController
 @property (strong,nonatomic)UIView *selectBtn;
+@property(strong,nonatomic)UISearchBar *search;
+
+-(UIView *)SelectBtnView:(NSString *)name delegate:(id<UISearchBarDelegate >)delegate;
 -(void) createNav:(UIViewController *)vc;
 
 //MARK:重写左边导航栏按钮
 -(void)changeLeftBtn;
--(void)selectBtnView;
+
 @end

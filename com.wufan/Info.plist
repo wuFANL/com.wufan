@@ -29,6 +29,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>需要开启您的蓝牙来开启权限</string>
+	<key>NSCameraUsageDescription</key>
+	<string>需要访问您的相机!</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>App需要获取你的位置</string>
 	<key>UIBackgroundModes</key>
@@ -56,5 +60,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

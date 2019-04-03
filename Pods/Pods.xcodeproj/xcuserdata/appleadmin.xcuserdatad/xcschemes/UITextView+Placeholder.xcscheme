@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D7807584689C5E107F9BE61AB3DEA7B"
+               BlueprintIdentifier = "D7137686A7D53D2A2369C7D920662E2E"
                BlueprintName = "UITextView+Placeholder"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libUITextView+Placeholder.a">

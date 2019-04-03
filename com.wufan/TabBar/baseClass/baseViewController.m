@@ -8,22 +8,33 @@
 
 #import "baseViewController.h"
 
-@interface baseViewController ()
-
+@interface baseViewController ()<UISearchBarDelegate>
+{
+    CGRect viewRect;
+}
+@property(nonatomic ,strong) UITextField * firstResponderTextF;//记录将要编辑的输入框
 @end
 
 @implementation baseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     AppDelegate *appdele=APPDTE;
-    appdele.allowRotation=YES;
-    
+    appdele.allowRotation=NO;
+    //底部导航和顶部导航被遮挡问题
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+//    self.firstResponderTextF.delegate=self;
    
     // Do any additional setup after loading the view.
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+        viewRect=self.view.frame;
+    
+}
 - (void)didReceiveMemoryWarning {
     
     [super didReceiveMemoryWarning];
@@ -34,15 +45,6 @@
     [self.navigationController popViewControllerAnimated:YES];
     
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 -(void)createNav:(UIViewController *)vc{
 
     
@@ -53,7 +55,7 @@
         UIView *navView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, 44)];
         [vc.view addSubview:navView];
         // 创建导航栏的titleLabel
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0,44)];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0,30)];
         titleLabel.text = @"定位详情";
         [titleLabel sizeToFit];
         titleLabel.frame = CGRectMake([UIScreen mainScreen].bounds.size.width / 2 - titleLabel.frame.size.width / 2, 0, titleLabel.frame.size.width, 44);
@@ -85,69 +87,120 @@
     self.navigationItem.leftBarButtonItem=btnItem;
 }
 -(UIView *)selectBtn{
-    if (_selectBtn) {
+    if (!_selectBtn) {
         _selectBtn=[[UIView alloc]init];
-//        float w=screen_bound.size.width-100;
+        _selectBtn.backgroundColor=RGBHex(0Xf5f5f5);
+        UIButton *centerBtn=[[UIButton alloc]init];
+//        centerBtn.backgroundColor=RGBHex(0XD3D3D3);
+        centerBtn.titleLabel.font=[UIFont systemFontOfSize:15]; centerBtn.titleLabel.adjustsFontSizeToFitWidth=YES;
+        centerBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+          [centerBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [centerBtn setTitle:@"搜一搜" forState:UIControlStateNormal];
+        [_selectBtn addSubview:centerBtn];
+        [centerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(2);
+            make.left.mas_equalTo(42);
+            make.right.mas_equalTo(-42);
+            make.bottom.mas_equalTo(-2);
+        }];
         UIButton *select=[[UIButton alloc]init];
-        select.imageView.image=[UIImage imageNamed:@"select"];
+        [select setBackgroundImage:[UIImage imageNamed:@"select"]  forState:UIControlStateNormal];
         select.contentMode=UIViewContentModeScaleAspectFit;
+     select.contentMode=UIViewContentModeScaleAspectFit;
         [_selectBtn addSubview:select];
         [select mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(2);
+            make.right.mas_equalTo(centerBtn.mas_left).and.offset(-5);
+            //            make.size.mas_equalTo(CGSizeMake(25, 25));
+            make.bottom.mas_equalTo(-2);
         }];
-        
-        
-        [select mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(2);
-            make.left.mas_equalTo(2);
-//            make.centerY.mas_equalTo(self.selectBtn.center.y);
-            make.size.mas_equalTo(CGSizeMake(20, 20));
-            make.bottom.mas_equalTo(2);
-        }];
-        
         UIButton *QR=[[UIButton alloc]init];
-        QR.imageView.image=[UIImage imageNamed:@"erweima"];
-        QR.contentMode=UIViewContentModeScaleAspectFit;
+        [QR setBackgroundImage:[UIImage imageNamed:@"erweima"] forState:UIControlStateNormal];
+        QR.contentMode=UIViewContentModeScaleAspectFit; QR.contentMode=UIViewContentModeScaleAspectFit;
         [_selectBtn addSubview:QR];
         [QR mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(2);
-            make.right.mas_equalTo(2);
-            //            make.centerY.mas_equalTo(self.selectBtn.center.y);
-            make.size.mas_equalTo(CGSizeMake(20, 20));
-            make.bottom.mas_equalTo(2);
+        make.left.mas_equalTo(centerBtn.mas_right).with.offset(-5);
+            //make.size.mas_equalTo(CGSizeMake(25, 25));
+            make.bottom.mas_equalTo(-2);
         }];
-        UIButton *centerBtn=[[UIButton alloc]init];
-        centerBtn.backgroundColor=RGBHex(0XD3D3D3);
-        [_selectBtn addSubview:centerBtn];
-        
-        [QR mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(2);
-            make.centerY.mas_equalTo(self.selectBtn.center.y);
-            make.size.mas_equalTo(CGSizeMake(65, 40)).offset(44);
-            //            make.centerY.mas_equalTo(self.selectBtn.center.y);
-            make.bottom.mas_equalTo(2);
-        }];
-      
-        
     }
     return _selectBtn;
 }
-
--(void)SelectBtnView{
-
-    
+-(UIView *)SelectBtnView:(NSString *)name delegate:(id<UISearchBarDelegate >)delegate{
+    UISearchBar *searchBar=[[UISearchBar alloc]initWithFrame:CGRectZero];
+        searchBar.placeholder=name;
+    [searchBar setSearchResultsButtonSelected:NO];//设置搜索结果是否被选中
+    [searchBar setShowsSearchResultsButton:YES];
+    searchBar.delegate=delegate;
+    return searchBar;
 }
-
-
+-(UISearchBar *)search{
+    if (!_search) {
+        _search=[[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, 230, 30)];
+//        _search=[[UISearchBar alloc]init];
+//        _selectBtn.bar=[UIColor grayColor];
+        _search.barStyle=UIBarStyleDefault;
+    }
+    return  _search;
+}
 - (BOOL)shouldAutorotate {
     return NO;
 }
-
--(void)dealloc{
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    //点击空白回收键盘
+//    [self.view endEditing:YES];
+  if ([self.firstResponderTextF isFirstResponder])[self.firstResponderTextF resignFirstResponder];
+}
+#pragma maek UITextFieldDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     
+    textField.keyboardType=UIKeyboardTypeDefault;
     
-    
-    
+    self.firstResponderTextF = textField;//当将要开始编辑的时候，获取当前的textField
+    return YES;
+}
+//
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
+#pragma mark : UIKeyboardWillShowNotification/UIKeyboardWillHideNotification
+- (void)keyboardWillShow:(NSNotification *)notification{
+    
+//       viewRect=self.view.frame;
+    
+    //获取键盘高度，在不同设备上，以及中英文下是不同的
+    CGFloat kbHeight = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+    //计算出键盘顶端到inputTextView panel底端的距离(加上自定义的缓冲距离INTERVAL_KEYBOARD)
+    //输入框的y与键盘的高度
+    CGFloat texfiedY=self.firstResponderTextF.frame.origin.y;
+    CGFloat fiedHeight=self.firstResponderTextF.frame.size.height;
+    //一定是屏幕的高度否则不对
+     int height = [ UIScreen mainScreen ].bounds.size.height;
+    CGFloat offset =height-texfiedY-fiedHeight-kbHeight;
+    // 取得键盘的动画时间，这样可以在视图上移的时候更连贯
+    double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    //将视图上移计算好的偏移
+    if(offset < 0) {
+        [UIView animateWithDuration:duration animations:^{
+            self.view.frame = CGRectMake(0.0f, offset, self.view.frame.size.width, self.view.frame.size.height);
+        }];
+    }
+}
+- (void)keyboardWillHide:(NSNotification *)notification{
+    // 键盘动画时间
+    double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    //视图下沉恢复原状
+    [UIView animateWithDuration:duration animations:^{
+//        self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        self.view.frame=self->viewRect;
+          NSLog(@"当前屏幕的高度是：%@", NSStringFromCGRect(self.view.frame));
+    }];
+}
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
 @end

@@ -15,11 +15,10 @@
 
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import "AFNetworking.h"
 #import "Nutill.h"
 #import "AppDelegate.h"
-
-
+#import "leaseback.h"
+#import "SDCycleScrollView.h"
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "YYModel.h"
@@ -28,6 +27,7 @@
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 #import "Masonry.h"
+#import "SSnormal.h"
 
 
 
@@ -45,6 +45,8 @@
 #define screen_bound [[UIScreen mainScreen] bounds]
 //当前屏幕的frame
 #define screen_fram [[UIScreen mainScreen] frame]
+#define KScree_Width [[UIScreen mainScreen]bounds].size.width
+#define KScree_Hight [[UIScreen mainScreen]bounds].size.height
 //Appdelegate实例
 #define APPDTE (AppDelegate *)[[UIApplication sharedApplication]delegate]
 
@@ -70,3 +72,4 @@
 
 
 #endif /* PrefixHeader_pch */
+//÷qqqqqqq

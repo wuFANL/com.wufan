@@ -92,7 +92,6 @@ NSString * const ID = @"SDCycleScrollViewCell";
     _currentPageDotColor = [UIColor whiteColor];
     _pageDotColor = [UIColor lightGrayColor];
     _bannerImageViewContentMode = UIViewContentModeScaleToFill;
-    
     self.backgroundColor = [UIColor lightGrayColor];
     
 }
