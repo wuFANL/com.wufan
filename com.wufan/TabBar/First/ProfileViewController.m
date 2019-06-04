@@ -38,8 +38,10 @@
 //    btn.titleLabel.adjustsFontSizeToFitWidth=YES;
     
     btn.backgroundColor=[UIColor grayColor];
-    [btn setTitle:@"我的二维码" forState:UIControlStateNormal];
-    btn.titleLabel.font=[UIFont systemFontOfSize:15.f];
+    [btn setTitle:@"我的二维" forState:UIControlStateNormal];
+    
+    btn.titleLabel.font=[UIFont fontWithName:@"uxIconFont" size:27];
+//    btn.titleLabel.font=[UIFont systemFontOfSize:15.f];
     btn.tag=100;
     [btn addTarget:self action:@selector(commitImage:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
@@ -74,7 +76,7 @@
         //session 产生的task是挂起的
         //响应
        NSDictionary *infoDict= [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-        NSLog(@"shuji、、、、%@",infoDict);
+//        NSLog(@"shuji、、、、%@",infoDict);
         
     }];
       [task resume];
@@ -120,17 +122,55 @@
 }
 //二维码或者图片合成页面
 - (IBAction)commitImage:(id)sender {
+
+//    NSString *shareText = @"我是title";
+//    //图片应是加载完成后的image或本地的image，否则可能会出错
+//    UIImage *shareImage = [UIImage imageNamed:@"kn-2"];
+//    NSURL *shareUrl = [NSURL URLWithString:@"https://www.jianshu.com/u/15d37d620d5b"];
+//    NSArray *activityItems = @[shareText,shareImage,shareUrl];
+//
+//    
+//    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+//    activityVC.excludedActivityTypes = @[UIActivityTypePostToFacebook,UIActivityTypePostToTwitter, UIActivityTypePostToWeibo,UIActivityTypeMessage,UIActivityTypeMail,UIActivityTypePrint,UIActivityTypeCopyToPasteboard,UIActivityTypeAssignToContact,UIActivityTypeSaveToCameraRoll,UIActivityTypeAddToReadingList,UIActivityTypePostToFlickr,UIActivityTypePostToVimeo,UIActivityTypePostToTencentWeibo,UIActivityTypeAirDrop,UIActivityTypeSaveToCameraRoll];
+//    [self presentViewController:activityVC animated:TRUE completion:nil];
+    /*
+     
+     if([WXApi isWXAppInstalled]){//判断当前设备是否安装微信客户端
+     [[NetworkManager shareInstance]HomeBannerSuccess:^(NSArray * _Nonnull bannerArray) {
+     WXMediaMessage *message = [WXMediaMessage message];
+     WXImageObject *imageobj=[WXImageObject object];
+     HomeBannerModel *model=bannerArray[0];
+     imageobj.imageData= [NSData dataWithContentsOfURL:[NSURL URLWithString:model.img]];
+     message.mediaObject=imageobj;
+     SendMessageToWXReq *sendReq = [[SendMessageToWXReq alloc] init];
+     sendReq.bText = NO;//不使用文本信息
+     sendReq.message = message;
+     sendReq.scene = WXSceneTimeline;//分享到好友会话
+     
+     [WXApi sendReq:sendReq];//发送对象实例
+     } failure:^(NSString * _Nonnull failureMessage) {
+     [self showHint:failureMessage];
+     }];
+     }else{
+     [self showHint:@"请先安装微信"];
+     }
+     
+    
+     */
+    
+    
     ewmViewController *vc=[[ewmViewController alloc]init];
     UIButton *button=(UIButton *)sender;
-//    判断是哪个按钮点过来的 
+    //    判断是哪个按钮点过来的
     if (button.tag==100) {
         [vc.info setValue:@"ewm" forKey:@"view"];
     }else{
-         [vc.info setValue:@"TP" forKey:@"view"];
+        [vc.info setValue:@"TP" forKey:@"view"];
     }
-//    self.hidesBottomBarWhenPushed = YES;
-     [self.navigationController pushViewController:vc animated:YES];
-//    self.hidesBottomBarWhenPushed = NO;
+    //    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+    //    self.hidesBottomBarWhenPushed = NO;
+    
 }
 - (IBAction)afnetTest:(id)sender {
     
@@ -330,5 +370,10 @@
         NSLog(@"第%d年利息为: %lf 总额为：%f,定期存款为%f",i+1,num,ziJin,dqck);
     }
     self.result.text=[NSString stringWithFormat:@"%f",ziJin];
+}
+-(void)injected{
+    NSLog(@"我是injection%@",self);
+    [self viewDidLoad];
+
 }
 @end

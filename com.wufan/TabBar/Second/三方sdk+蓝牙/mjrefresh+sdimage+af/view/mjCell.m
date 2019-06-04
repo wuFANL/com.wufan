@@ -36,7 +36,6 @@
         [_title setFont:[UIFont systemFontOfSize:12]];
         [self.contentView addSubview:_title];
         [_title makeConstraints:^(MASConstraintMaker *make) {
-            //            make.left.mas_equalTo(cell.contentView).offset(5);
             make.centerX.mas_equalTo(self.contentView);
             make.bottom.mas_equalTo(-10);
             make.height.mas_equalTo(20);

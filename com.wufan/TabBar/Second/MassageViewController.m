@@ -12,6 +12,9 @@
 #import "MJViewController.h"
 #import "BlueViewController.h"
 #import "FMTagsView.h"
+#import "SegmentViewController.h"
+#import "LoginViewController.h"
+#import "VideoPhotoViewController.h"
 @interface MassageViewController ()<FMTagsViewDelegate>
 @property(nonatomic,strong)FMTagsView *fmTagView;
 @property(nonatomic,strong)NSMutableArray *dataarr;
@@ -45,7 +48,7 @@
         _fmTagView.tagTextColor = [UIColor grayColor];
         _fmTagView.delegate = self;
         [self.view addSubview:_fmTagView];
-        _dataarr=[NSMutableArray arrayWithObjects:@"定位",@"蓝牙",@"SDWebImage，AFNetworking，MJRefresh",nil];
+        _dataarr=[NSMutableArray arrayWithObjects:@"定位",@"蓝牙",@"SDWebImage，AFNetworking，MJRefresh",@"segment",@"微信登陆测试",@"拍照测试",nil];
         
         //        _dataArray = @[@"定位", @"SDWebImage，AFNetworking，MJRefresh", @"亲子装"];
         //设置数据源
@@ -69,12 +72,26 @@
         case 2:
              [self gotoMjview];
             break;
+        case 3:
+            [self gotoSegment];
+            break;
+        case 4:
+            [self gotoWX];
+            break;
+        case 5:
+            [self gotoVideo];
+            break;
         default:
             break;
     }
 }
 
 #pragma mark --->action
+-(void)gotoSegment{
+    SegmentViewController *segvc=[[SegmentViewController alloc]init];
+    [self.navigationController pushViewController:segvc animated:YES];
+}
+
 -(void)gotoMjview{
     [self performSelector:@selector(gotonext) withObject:@"test1" afterDelay:0.1];
     
@@ -91,4 +108,15 @@
     LocationViewController *lvc=[[LocationViewController alloc]init];
     [self.navigationController pushViewController:lvc animated:YES]; 
 }
+-(void)gotoWX{
+    LoginViewController *lvc=[[LoginViewController alloc]init];
+    [self.navigationController pushViewController:lvc animated:YES];
+}
+-(void)gotoVideo{
+    VideoPhotoViewController *lvc=[[VideoPhotoViewController alloc]init];
+    lvc.hidesBottomBarWhenPushed=YES;
+    [self.navigationController pushViewController:lvc animated:YES];
+}
+
+
 @end

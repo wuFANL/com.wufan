@@ -46,6 +46,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__33-[SegmentViewController initDate]_block_invoke:SegmentViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.listarr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[ewmViewController createImage]:ewmViewController.m">
          <PersistentStrings>
             <PersistentString

@@ -31,10 +31,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:self.tableview];
     [SVProgressHUD setDefaultStyle:(SVProgressHUDStyleDark)];
     [SVProgressHUD setBackgroundColor:[UIColor orangeColor]];
-    [SVProgressHUD dismissWithDelay:2];
+    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
+ 
     [self addMjrefresh];
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -45,7 +47,7 @@
 
 -(UITableView *)tableview{
     if (!_tableview) {
-        _tableview=[[UITableView alloc]initWithFrame:CGRectMake(0, 66, kMainScreenWidth, kMainScreenHeight-64) style:UITableViewStylePlain];
+        _tableview=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight-64) style:UITableViewStylePlain];
         _tableview.dataSource=self;
         _tableview.delegate=self;
         _tableview.backgroundColor=[UIColor whiteColor];
@@ -94,13 +96,13 @@
 //    [NSThread sleepForTimeInterval:3];
     BCHttpRequest *request=[[BCHttpRequest alloc]init];
     self.p=1;
+    [SVProgressHUD showWithStatus:@"加载中"];
     [ request postWithURLString:@"" parameters:@"" success:^(id  _Nonnull responseObject) {
         NSDictionary *dic=(NSDictionary *)responseObject;
-        
+        [SVProgressHUD dismiss];
         self.imageUrlList=[NSMutableArray array];
         NSArray *data=dic[@"data"];
         if (data.count!=0) {
-            [SVProgressHUD showSuccessWithStatus:@"请求成功"];
             for (int i=0; i<data.count; i++) {
                 Mjmodel *mode=[[Mjmodel alloc]init];
                 mode.coverUrl=data[i][@"coverUrl"];
@@ -114,13 +116,15 @@
             [self.tableview reloadData];
         }else{
             
-            [SVProgressHUD showErrorWithStatus:@"请求失败"];
+            [SVProgressHUD showErrorWithStatus:@"加载失败"];
         }
         
          NSLog(@"%@",data[0][@"coverUrl"]);
         NSLog(@"请求成功");
     } failure:^(NSError * _Nonnull error) {
+         [SVProgressHUD showErrorWithStatus:@"加载失败"];
         NSLog(@"请求失败");
+        
     } baseurl:@"http://box.dwstatic.com/apiAlbum.php?OSType=iOS8.2&action=l&albumsTag=beautifulWoman&v=77&versionName=2.1.10&p=1"];
     
     
@@ -144,13 +148,17 @@
     NSString *url=[NSString stringWithFormat:@"%@&p=%d",request,self.p];
     
     BCHttpRequest *requests=[[BCHttpRequest alloc]init];
+    [SVProgressHUD showSuccessWithStatus:@"请求成功"];
+    
     [ requests postWithURLString:@"" parameters:@"" success:^(id  _Nonnull responseObject) {
         NSDictionary *dic=(NSDictionary *)responseObject;
         
 //        self.imageUrlList=[NSMutableArray array];
         NSArray *data=dic[@"data"];
         if (data.count!=0) {
-            [SVProgressHUD showSuccessWithStatus:@"请求成功"];
+            
+            
+            
             for (int i=0; i<data.count; i++) {
                 Mjmodel *mode=[[Mjmodel alloc]init];
                 mode.coverUrl=data[i][@"coverUrl"];
@@ -219,7 +227,11 @@
     return cell;
     
 }
-
+-(void)injected{
+    NSLog(@"我是injection%@",self);
+    [self viewDidLoad];
+    [self viewWillAppear:YES];
+}
 
 
 @end

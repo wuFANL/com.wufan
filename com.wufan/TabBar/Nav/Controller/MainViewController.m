@@ -14,6 +14,7 @@
 #import "MoreViewController.h"
 #import "Animation.h"
 #import "AnimationController.h"
+#import "JSBadgeView.h"
 	
 //#import "Maso"
 @interface MainViewController ()<UITabBarControllerDelegate>
@@ -59,7 +60,14 @@
     USNav.tabBarItem.title=@"购物车";
     USNav.tabBarItem.image=[UIImage imageNamed:@"gwc"];
     USNav.tabBarItem.selectedImage=[UIImage imageNamed:@"gwcselect"];
+//    JSBadgeView *badgeView  = [[JSBadgeView alloc ] initWithParentView:USNav.tabBarItem.image alignment:JSBadgeViewAlignmentTopRight];
+    USNav.tabBarItem.badgeValue=@"10";
+    // 设置badgeView中的text值，不一定是数字
+//    badgeView.badgeText = @"12";
     
+    //还可设置badgeView的text字体，圆圈的颜色，阴影颜色等，参照JSBadgeView.h中的属性进行自定义
+    
+//    [USNav.tabBarItem.image addSubview:badgeView];
     
     MoreViewController *morevc=[[MoreViewController alloc]initWithNibName:@"MoreViewController" bundle:nil];
     MONav=[[MBNavgationController alloc]initWithRootViewController:morevc];

@@ -20,8 +20,9 @@
 
 //有盾商户Key
 #define KUDKey              @"a9889bff-ddd6-4a6a-a3ce-e26e0d2688e5"
-
-
+//众鼎小草莓的微信
+#define WX_AppSecret @"92f0b88d1d9037d0928b7c4e9a20016d"
+#define WX_OPEN_ID @"wx01920e1cec6462cf"
 
 
 

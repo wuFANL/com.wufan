@@ -154,7 +154,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DE851F171948CB69CFB2D21C4D11FC58"
+               BlueprintIdentifier = "71127B2517108FD1749295A1E2C27DA7"
                BuildableName = "libPods-com.wufanUITests.a"
                BlueprintName = "Pods-com.wufanUITests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -182,7 +182,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F01CAE5BFFC1788D9F7CEDBA738FEC02"
+               BlueprintIdentifier = "BAB8282420DC39C325F5F119B7F41152"
                BuildableName = "libSDCycleScrollView.a"
                BlueprintName = "SDCycleScrollView"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -196,7 +196,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B74B30D027C872EC56484DC3B14745D2"
+               BlueprintIdentifier = "1D22387683C31E082FC1F59CA8FB0A95"
                BuildableName = "libSDWebImage.a"
                BlueprintName = "SDWebImage"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -210,7 +210,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D7807584689C5E107F9BE61AB3DEA7B"
+               BlueprintIdentifier = "07E5E8F0A134D29EBDE87FDBD7083B13"
                BuildableName = "libUITextView+Placeholder.a"
                BlueprintName = "UITextView+Placeholder"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -224,7 +224,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EF4B6990E474D820D3F3A6A7B4324094"
+               BlueprintIdentifier = "17095EBFCBDF99C793A585E9F3378821"
                BuildableName = "libWMPageController.a"
                BlueprintName = "WMPageController"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -238,7 +238,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F40CA483A2C2E202EEE6620B1A46C6CA"
+               BlueprintIdentifier = "874E2B97C35C48868AB13B9EFF76C4DB"
                BuildableName = "libYYModel.a"
                BlueprintName = "YYModel"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -252,7 +252,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "157A1EBD9DF67F671FE174774B812D74"
+               BlueprintIdentifier = "846EA3AFDDA9A0BD3AB96B8804D92765"
                BuildableName = "libYYText.a"
                BlueprintName = "YYText"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

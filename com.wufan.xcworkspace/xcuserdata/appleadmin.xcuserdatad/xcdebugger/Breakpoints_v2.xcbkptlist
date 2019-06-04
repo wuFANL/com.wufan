@@ -6,32 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "com.wufan/TabBar/Second/&#x4e09;&#x65b9;&#x6d4b;&#x8bd5;/MjrefreshTest/controller/MJViewController.m"
-            timestampString = "575915264.66362"
+            filePath = "com.wufan/TabBar/Second/&#x4e09;&#x65b9;sdk+&#x84dd;&#x7259;/segment/SegmentViewController.m"
+            timestampString = "576729849.230361"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "com.wufan/TabBar/Second/&#x4e09;&#x65b9;&#x6d4b;&#x8bd5;/MjrefreshTest/controller/MJViewController.m"
-            timestampString = "575915264.6643161"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
+            landmarkName = "-segmentedView:viewForScrollViewInSegment:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "com.wufan/TabBar/Second/&#x4e09;&#x65b9;&#x6d4b;&#x8bd5;/MjrefreshTest/view/mjCell.m"
-            timestampString = "575915264.664901"
+            filePath = "com.wufan/TabBar/Second/&#x4e09;&#x65b9;sdk+&#x84dd;&#x7259;/mjrefresh+sdimage+af/controller/MJViewController.m"
+            timestampString = "578051246.884699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-initWithStyle:reuseIdentifier:"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-reloadDate"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +41,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "com.wufan/TabBar/Second/&#x4e09;&#x65b9;&#x6d4b;&#x8bd5;/MjrefreshTest/controller/MJViewController.m"
-            timestampString = "575915264.665225"
+            filePath = "com.wufan/TabBar/Second/Location/controller/LocationViewController.m"
+            timestampString = "578325318.2671649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "-downloadDate"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "-mapView:didUpdateUserLocation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "com.wufan/TabBar/Second/Location/controller/LocationViewController.m"
+            timestampString = "578325323.936603"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-locationManager:didUpdateLocations:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

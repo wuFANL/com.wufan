@@ -44,7 +44,7 @@ self.manager.responseSerializer.acceptableContentTypes=[NSSet setWithObjects:@"a
 }
 
 -(void)getWithURLString:(NSString *)URLString
-             parameters:(id)parameters
+             parameters:(nullable id)parameters
                 success:(void (^)(id responseObject))success
                 failure:(void(^)(NSError *error))failure{
     [self.manager GET:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -57,7 +57,7 @@ self.manager.responseSerializer.acceptableContentTypes=[NSSet setWithObjects:@"a
         }
     }];
 }
--(void)postWithURLString:(NSString *)URLString parameters:(id)paramters success:(void(^)(id responseObject))success failure:(void(^)(NSError *error))failure baseurl:(NSString *)base_url{
+-(void)postWithURLString:(NSString *)URLString parameters:(nullable id)paramters success:(void(^)(id responseObject))success failure:(void(^)(NSError *error))failure baseurl:(NSString *)base_url{
     if (base_url==nil) {
         base_url=BASE_URL;
     }

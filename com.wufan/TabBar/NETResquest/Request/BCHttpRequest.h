@@ -52,7 +52,7 @@ typedef NS_ENUM(NSUInteger,BCHttpRequestType) {
  @param failure    请求失败的回调
  */
 -(void)getWithURLString:(NSString *)URLString
-             parameters:(id)parameters
+             parameters:(nullable id)parameters
              success:(void (^)(id responseObject))success
              failure:(void(^)(NSError *error))failure;
 
@@ -64,7 +64,7 @@ typedef NS_ENUM(NSUInteger,BCHttpRequestType) {
  @param success   成功返回的回调
  @param failure   失败返回的回调
  */
--(void)postWithURLString:(NSString *)URLString parameters:(id)paramters success:(void(^)(id responseObject))success failure:(void(^)(NSError *error))failure baseurl:(NSString *)base_url;
+-(void)postWithURLString:(NSString *)URLString parameters:(nullable id)paramters success:(void(^)(id responseObject))success failure:(void(^)(NSError *error))failure baseurl:(NSString *)base_url;
 
 /**
  发送网络请求

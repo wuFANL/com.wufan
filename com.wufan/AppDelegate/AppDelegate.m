@@ -10,10 +10,11 @@
 #import "RootViewController.h"
 #import "MainViewController.h"
 #import "XGPush.h"
+#import "WXApi.h"
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
 #import <UserNotifications/UserNotifications.h>
 #endif
-@interface AppDelegate ()<XGPushDelegate>
+@interface AppDelegate ()<XGPushDelegate,WXApiDelegate>
 @end
 
 @implementation AppDelegate
@@ -93,7 +94,19 @@
 //    self.window=[[UIWindow alloc]initWithFrame:screen_bound];
 //    self.window.backgroundColor=[UIColor whiteColor];
 //    [self.window makeKeyAndVisible];
+    //TODO:微信注册
+        [WXApi registerApp:WX_OPEN_ID];
     
+    
+
+#if DEBUG
+    // iOS
+    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle"] load];
+    // tvOS
+    //[[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/tvOSInjection.bundle"] load];
+    // macOS
+    //[[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/macOSInjection.bundle"] load];
+#endif
     NSString *version= [UIDevice currentDevice].systemVersion;
     if(version.doubleValue >=12.0) {
         [[UITabBar appearance] setTranslucent:NO];
@@ -152,6 +165,47 @@
 
     return YES;
 }
+#pragma mark->微信回调的api开始--------
+//不同的系统可能走的回调不一样
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return  [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary*)options {
+    return [WXApi handleOpenURL:url delegate:self];
+}
+//FIXME:微信登陆、支付后无论成功或者失败都会回调的
+- (void)onResp:(BaseResp *)resp{
+    if([resp isKindOfClass:[PayResp class]]){
+        if(resp.errCode==0){
+//            支付成功
+            NSLog(@"支付成功");
+        }else{
+            NSLog(@"支付失败");
+//            支付失败
+        }
+            
+    }
+    if([resp isKindOfClass:[SendAuthResp class]]){
+        if (resp.errCode==0) {
+    //            登陆成功
+            NSLog(@"登录成功");
+        }else{
+            NSLog(@"登录失败");
+    //            登陆失败
+        }
+        
+    }
+    
+    
+}
+
+#pragma mark->微信回调的api结束--------
+
 /// 这个函数存在的意义在于：当用户在设置中关闭了通知时，程序启动时会调用此函数，我们可以获取用户的设置
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
     [application registerForRemoteNotifications];

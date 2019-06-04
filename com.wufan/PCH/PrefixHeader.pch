@@ -50,6 +50,53 @@
 //Appdelegate实例
 #define APPDTE (AppDelegate *)[[UIApplication sharedApplication]delegate]
 
+#define SYSTEM_VERSION_IOS7     ([[UIViewController class] instancesRespondToSelector:@selector(edgesForExtendedLayout)])
+#define IsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define HKXNoneNullString(obj) ((![obj isEqual:[NSNull null]]) && (obj != nil)) ? [NSString stringWithFormat:@"%@", obj] : @""
+
+#define IS_IPHONE_4 (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double )480) < DBL_EPSILON )
+#define IS_IPHONE_5 (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double )568) < DBL_EPSILON )
+#define IS_IPHONE_6 (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double )667) < DBL_EPSILON )
+#define IS_IPHONE_6_PLUS (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double )736) < DBL_EPSILON )
+#define IsiPhoneXR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IsiPhoneXSMAX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
+// 统一字体
+#define kFontName               @"Helvetica" //NotoSansCJK-Light  HiraMinProN-W3    PingHei-Text  HiraginoSans-W3
+#define kFontBold               @"Helvetica" //SourceHanSansK-Normal  HiraginoSans-W6
+
+#define kFontWith30             [UIFont fontWithName:kFontName size:30.0f]
+#define kFontWith20             [UIFont fontWithName:kFontName size:20.0f]
+#define kFontWith18             [UIFont fontWithName:kFontName size:18.0f]
+#define kFontWith17             [UIFont fontWithName:kFontName size:17.0f]
+#define kFontWith16             [UIFont fontWithName:kFontName size:16.0f]
+#define kFontWith15             [UIFont fontWithName:kFontName size:15.0f]
+#define kFontWith14             [UIFont fontWithName:kFontName size:14.0f]
+#define kFontWith13             [UIFont fontWithName:kFontName size:13.0f]
+#define kFontWith12             [UIFont fontWithName:kFontName size:12.0f]
+#define kFontWith11             [UIFont fontWithName:kFontName size:11.0f]
+#define kFontWith10             [UIFont fontWithName:kFontName size:10.0f]
+#define kFontWith9              [UIFont fontWithName:kFontName size:9.0f]
+#define kFontWith7              [UIFont fontWithName:kFontName size:7.0f]
+
+#define kFontBoldWith50         [UIFont fontWithName:kFontBold size:50.0f]
+#define kFontBoldWith30         [UIFont fontWithName:kFontBold size:30.0f]
+#define kFontBoldWith40         [UIFont fontWithName:kFontBold size:40.0f]
+#define kFontBoldWith27         [UIFont fontWithName:kFontBold size:27.0f]
+#define kFontBoldWith25         [UIFont fontWithName:kFontBold size:25.0f]
+#define kFontBoldWith20         [UIFont fontWithName:kFontBold size:20.0f]
+#define kFontBoldWith18         [UIFont fontWithName:kFontBold size:18.0f]
+#define kFontBoldWith16         [UIFont fontWithName:kFontBold size:16.0f]
+#define kFontBoldWith15         [UIFont fontWithName:kFontBold size:15.0f]
+#define kFontBoldWith14         [UIFont fontWithName:kFontBold size:14.0f]
+#define kFontBoldWith12         [UIFont fontWithName:kFontBold size:12.0f]
+#define kFontBoldWith10         [UIFont fontWithName:kFontBold size:10.0f]
+/** 色值 RGBA **/
+#define RGB_A(r, g, b, a) [UIColor colorWithRed:(CGFloat)(r)/255.0f green:(CGFloat)(g)/255.0f blue:(CGFloat)(b)/255.0f alpha:(CGFloat)(a)]
+
+/** 色值 RGB **/
+#define RGB(r, g, b) RGB_A(r, g, b, 1)
+#define RGB_HEX(__h__) RGB((__h__ >> 16) & 0xFF, (__h__ >> 8) & 0xFF, __h__ & 0xFF)
+
 #ifdef DEBUG //开发阶段
 
 #define NSLog(format,...) printf("%s [Line %d] " "%s\n",__PRETTY_FUNCTION__, __LINE__,[[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String])

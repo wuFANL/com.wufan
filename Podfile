@@ -31,6 +31,8 @@ pod 'ReactiveObjC', '~> 3.0.0'
     pod 'Bugly'
     pod 'MoxieSDK-iOS'
     pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
-   end
+   pod 'JSBadgeView' 
+   pod 'PKShortVideo', '~> 0.9.4'
+end
 
 end

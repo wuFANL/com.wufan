@@ -232,11 +232,7 @@
 //    UIImage *imgIcon =[UIImage createRoundedRectImage:[UIImage imageNamed:@"QRCode"]  withSize:CGSizeMake(70.0, 93.0) withRadiuus:10];
     CGSize size=CGSizeMake(70.0, 93.0);
 //    UIImage *imgIcon=[UIImage createRoundedRectImage:[UIImage imageNamed:@"启动"] withSize:size withRadiuus:10];
-    UIImage *imgIcon=[UIImage createRoundedRectImage:[UIImage imageNamed:@"111"] withSize:size withRadius:10.0];
-    //使用核心绘图框架CG（Core Graphics）对象操作，合并二维码图片和用于中间显示的图标图片
-    imgAdaptiveQRCode = [KMQRCode addIconToQRCodeImage:imgAdaptiveQRCode
-                                              withIcon:imgIcon
-                                          withIconSize:imgIcon.size];    
+    
     //    imgAdaptiveQRCode = [KMQRCode addIconToQRCodeImage:imgAdaptiveQRCode
     //                                              withIcon:imgIcon
     //                                             withScale:3];
